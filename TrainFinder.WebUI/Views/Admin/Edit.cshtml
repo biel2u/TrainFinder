@@ -1,0 +1,15 @@
+﻿@model TrainFinder.Domain.Entities.Train
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edycja @Model.Number</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Zapisz"/>
+    @Html.ActionLink("Anuluj", "Index", "Admin")
+}
+
