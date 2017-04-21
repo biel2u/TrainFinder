@@ -70,3 +70,8 @@ a {
     color: red;
     font-weight: bold;
 }
+
+.panel {
+    width: 50%;
+    margin: 0 auto;
+}

@@ -16,5 +16,19 @@ namespace TrainFinder.Domain.Concrete
            get { return context.Trains; }
         }
 
+        public void SaveChanges (Train train)
+        {
+            Train dbEntry = context.Trains.Find(train.TrainID);
+            if (dbEntry != null)
+            {
+                dbEntry.Platform = train.Platform;
+                dbEntry.Localization = train.Localization;
+                dbEntry.Destination = train.Destination;
+                dbEntry.Arrival = train.Arrival;
+                dbEntry.Departure = train.Departure;
+                dbEntry.Status = train.Status;
+            }
+            context.SaveChanges();
+        }
     }
 }

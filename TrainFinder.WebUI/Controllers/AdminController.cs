@@ -26,5 +26,20 @@ namespace TrainFinder.WebUI.Controllers
             Train train = repository.Trains.FirstOrDefault(p => p.TrainID == trainID);
             return View(train);
         }
+
+        [HttpPost]
+        public ActionResult Save(Train train)
+        {
+            if(ModelState.IsValid)
+            {
+                repository.SaveChanges(train);
+                TempData["message"] = string.Format("Zapisano zmiany!");
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(train);
+            }
+        }
     }
 }
