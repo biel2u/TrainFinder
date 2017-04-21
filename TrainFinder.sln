@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainFinder.Domain", "TrainFinder.Domain\TrainFinder.Domain.csproj", "{A5F8D8E7-A907-4B19-9951-1D89047D90CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainFinder.WebUI", "TrainFinder.WebUI\TrainFinder.WebUI.csproj", "{B39359C0-5E10-4D9B-8296-9B762BF7D521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5F8D8E7-A907-4B19-9951-1D89047D90CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F8D8E7-A907-4B19-9951-1D89047D90CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F8D8E7-A907-4B19-9951-1D89047D90CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F8D8E7-A907-4B19-9951-1D89047D90CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B39359C0-5E10-4D9B-8296-9B762BF7D521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B39359C0-5E10-4D9B-8296-9B762BF7D521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B39359C0-5E10-4D9B-8296-9B762BF7D521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B39359C0-5E10-4D9B-8296-9B762BF7D521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

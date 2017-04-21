@@ -1,0 +1,19 @@
+﻿@model IEnumerable<TrainFinder.Domain.Entities.Train>
+
+@{
+    ViewBag.Title = "TrainFinder";
+}
+
+<main class="main_Index">
+    <div class="main_div_Index">
+        @using (Html.BeginForm("FindTrain", "Home"))
+        {
+            @Html.TextBox("trainNumber")
+            <input type="submit" value="Szukaj" />
+        }
+        @if (TempData["message"] != null)
+        {
+            <div class="not_found">@TempData["message"]</div>
+        }
+    </div>
+</main>

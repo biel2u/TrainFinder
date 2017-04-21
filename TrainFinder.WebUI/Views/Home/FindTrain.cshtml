@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TrainFinder.Domain.Entities.Train>
+
+@{
+    ViewBag.Title = "TrainFinder";
+
+}
+<main>
+        @foreach (var item in Model)
+        {
+            if (item.Status == "Punktualny")
+            {
+                <div class="status_up">@Html.DisplayFor(modelItem => item.Number)</div>
+            }
+            else
+            {
+                <div class="status_down">@Html.DisplayFor(modelItem => item.Number)</div>
+            }
+        }
+    <div class="table_div_FindTrain">
+        <table class="table">
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Platform)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Localization)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destination)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrival)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Departure)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Platform)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Localization)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Destination)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Arrival)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Departure)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</main>
