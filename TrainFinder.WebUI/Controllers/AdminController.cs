@@ -38,7 +38,7 @@ namespace TrainFinder.WebUI.Controllers
             }
             else
             {
-                return View(train);
+                return View("Edit");
             }
         }
     }

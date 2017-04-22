@@ -5,10 +5,11 @@
 }
 
 <div class="panel">
-    <h2>Edycja pociągu numer: @Model.Number</h2>
+    <h2>Edycja pociągu</h2>
 
     @using (Html.BeginForm("Save", "Admin"))
     {
+        
         <div class="panel-body">
             @Html.HiddenFor(m => m.TrainID)
             @foreach (var property in ViewData.ModelMetadata.Properties)
@@ -31,13 +32,21 @@
                                 Text = "Opóźniony",
                                 Value = "Opóźniony"
                             });
-                            @Html.DropDownListFor(model => model.Status, listItems)
-                        }
-                        else
-                        {
+                            @Html.DropDownListFor(model => model.Status, listItems, new { @class = "form-control" })
+                       }
+                       else if (property.PropertyName == "Arrival")
+                       {
+                            @Html.TextBoxFor(model => model.Arrival, new { type = "time", @class = "form-control" })
+                       }
+                       else if (property.PropertyName == "Departure")
+                       {
+                            @Html.TextBoxFor(model => model.Departure, new { type = "time", @class = "form-control" })
+                       }
+                       else
+                       {
                             @Html.TextBox(property.PropertyName, null, new { @class = "form-control" });
-                        }
-                        @Html.ValidationMessage(property.PropertyName)
+                       }
+                            @Html.ValidationMessage(property.PropertyName)
                     </div>
                 }
             }
@@ -47,6 +56,6 @@
             @Html.ActionLink("Anuluj", "Index", null, new { @class = "btn btn-default" })
         </div>
     }
-    </div>
-    
+</div>
+
 

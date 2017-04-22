@@ -5,24 +5,24 @@ using System.ComponentModel.DataAnnotations;
 namespace TrainFinder.Domain.Entities
 {
     public class Train
-    {
-        
+    {      
         public int TrainID { get; set; }
         
         public int Number { get; set; }
 
+        
         [Required(ErrorMessage ="Proszę podać odpowiedni numer Peronu.")]
         [Display(Name = "Peron")]
         public int Platform { get; set; }
 
-        [Required(ErrorMessage ="Proszę podać gdzie pociąg się znajduje.")]
+        [Required(ErrorMessage ="Proszę podać ostatnią stację pociągu.")]
         [Display(Name = "Aktualne położenie")]
         public string Localization { get; set; }
 
         [Required(ErrorMessage ="Proszę podać cel podróży pociągu.")]
         [Display(Name = "Cel")]
         public string Destination { get; set; }
-
+      
         [Required(ErrorMessage ="Proszę podać czas przyjazdu pociągu.")]
         [Display(Name = "Czas przyjazdu")]
         public TimeSpan Arrival { get; set; }
