@@ -3,4 +3,4 @@ Aplikacja umożliwiająca wyszukiwanie i sprawdzanie aktualnego stanu wybranego 
 Każdy pociąg ma swój unikalny numer.
 Do bazy danych dodane są 2 przykładowe: opóźniony i punktualny
 Baza danych nie jest rozbudowana ma to za zadanie jedynie pokazać zasadę działania.
-
+Administrator ma możliwośc edycji wybranego pociągu.
