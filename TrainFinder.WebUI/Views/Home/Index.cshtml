@@ -8,12 +8,18 @@
     <div class="main_div_Index">
         @using (Html.BeginForm("FindTrain", "Home"))
         {
+            <label>Numer pociągu:</label>
             @Html.TextBox("trainNumber")
             <input type="submit" value="Szukaj" />
         }
         @if (TempData["message"] != null)
         {
             <div class="not_found">@TempData["message"]</div>
-        }
+        }       
     </div>
 </main>
+<footer>
+    <div class="login_div">
+        @Html.ActionLink("Zaloguj się", "Login", "Account", null, new { @class = "btn btn-primary" })
+    </div>
+</footer>

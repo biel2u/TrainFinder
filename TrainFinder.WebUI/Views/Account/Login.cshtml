@@ -1,0 +1,28 @@
+﻿@model TrainFinder.WebUI.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Logowanie";
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <h2>Zaloguj się</h2>
+    </div>
+    <div class="panel-body">
+        <p>Logowanie do panelu administracyjnego.</p>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <div class="form-group">
+                <label>Użytkownik:</label>
+                @Html.TextBoxFor(m => m.UserName, new { @class="form-control"})
+            </div>
+            <div class="form-group">
+                <label>Hasło:</label>
+                @Html.PasswordFor(m => m.Password, new { @class="form-control"})
+            </div>
+            <input type="submit" value="Zaloguj się" class="btn btn-primary" />
+        }
+    </div>
+</div>
+

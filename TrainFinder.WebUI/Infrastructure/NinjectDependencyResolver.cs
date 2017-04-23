@@ -5,6 +5,8 @@ using System.Web.Mvc;
 using TrainFinder.Domain.Entities;
 using TrainFinder.Domain.Abstract;
 using TrainFinder.Domain.Concrete;
+using TrainFinder.WebUI.Infrastructure.Abstract;
+using TrainFinder.WebUI.Infrastructure.Concrete;
 
 namespace TrainFinder.WebUI.Infrastructure
 {
@@ -30,6 +32,7 @@ namespace TrainFinder.WebUI.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<ITrainRepository>().To<EfTrainRepository>();
+            kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
     }
 }

@@ -8,6 +8,7 @@ using TrainFinder.Domain.Entities;
 
 namespace TrainFinder.WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private ITrainRepository repository;
