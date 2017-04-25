@@ -6,4 +6,4 @@ Baza danych nie jest rozbudowana ma to za zadanie jedynie pokazać zasadę dzia�
 Administrator ma możliwośc edycji wybranego pociągu.
 Autoryzacja użytkownika w przypadku logowania do panelu administracyjnego.  !!!!!!===>  login: login, hasło: password  <===!!!!!!
 Proste uwierzytelnianie z użyciem FormsAuthentication.Authenticate. 
-Dalszy rozwój: Poprawienie wyglądu aplikacji oraz jej bezpieczeństwa poprzez zastosowanie innej dormy uwierzytelniania.
+Dalszy rozwój: Poprawienie wyglądu aplikacji oraz jej bezpieczeństwa poprzez zastosowanie innej formy uwierzytelniania.
