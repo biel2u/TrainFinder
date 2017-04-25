@@ -85,3 +85,9 @@ footer {
     border-top: 1px solid black;
     padding: 20px;  
 }
+
+.find_result {
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 20px;
+}

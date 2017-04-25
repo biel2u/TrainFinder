@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace TrainFinder.Domain.Entities
@@ -24,11 +23,11 @@ namespace TrainFinder.Domain.Entities
         public string Destination { get; set; }
       
         [Required(ErrorMessage ="Proszę podać czas przyjazdu pociągu.")]
-        [Display(Name = "Czas przyjazdu")]
+        [Display(Name = "Godzina przyjazdu")]
         public TimeSpan Arrival { get; set; }
 
         [Required(ErrorMessage ="Prosze podać czas odjazdu pociągu.")]
-        [Display(Name = "Czas odjazdu")]
+        [Display(Name = "Godzina odjazdu")]
         public TimeSpan Departure { get; set; }
 
         [Required(ErrorMessage ="Proszę podać aktualny satus pociągu.")]
